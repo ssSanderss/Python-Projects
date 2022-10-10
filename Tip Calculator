@@ -1,0 +1,18 @@
+print("Welcome to the tip calculator!\n")
+
+def tip():
+    bill = input("What is the total bill amount? $")
+    bill = float(bill)
+    people = input("How many guests are there? ")
+    people = int(people)
+    tips = input("What percentage tip do you want to give? ")
+    tips = int(tips)
+
+    converted_tip = (tips / 100) + 1
+    bill_with_tip = bill * converted_tip
+
+    total = bill_with_tip / people
+    total = round(total, 2)
+    print(f"For a {tips}% tip, each guest will pay ${total}")
+
+tip()    
