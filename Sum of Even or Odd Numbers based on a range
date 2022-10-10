@@ -1,0 +1,44 @@
+def sum_even():
+  Range = input("Range of numbers to find the sum of even numbers: ")
+  if Range.count("-") >= 1:
+    Range = Range.split("-")
+  elif Range.count(" ") >= 1:
+    Range = Range.split(" ")
+  elif Range.count(",") >= 1:
+    Range = Range.count(",")
+  
+
+  sum = 0
+  Range2 = []
+  for num in Range:
+    num = int(num)
+    Range2.append(num)  
+    
+
+  for num in range(Range2[0], Range2[1] + 1):
+      if num % 2 == 0:
+        sum += num
+  print(f"\nThe sum of all even numbers between {Range2[0]} and {Range2[1]} is {sum}")
+
+      
+
+def sum_odd():
+  Range3 = input("Range of numbers to find the sum of odd numbers: ")
+  if Range3.count("-") >= 1:
+    Range3 = Range3.split("-")
+  elif Range3.count(" ") >= 1:
+    Range3 = Range3.split(" ")
+  elif Range3.count(",") >= 1:
+    Range3 = Range3.count(",")
+  
+  sum2 = 0
+  Range4 = []
+  for num in Range3:
+    num = int(num)
+    Range4.append(num)
+
+  for num in range(Range4[0], Range4[1] + 1):
+      if num % 2 != 0:
+        sum2 += num
+  print(f"\nThe sum of all odd numbers between {Range4[0]} and {Range4[1]} is {sum2}")
+
